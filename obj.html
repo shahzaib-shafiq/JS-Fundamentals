@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+
+<p id="name"></p>
+
+
+    <script>
+
+    let names=['Ali',"Salman"]
+    names[2]=1;
+    console.log(typeof(names))
+         
+
+// Create an Object
+const person = {};
+
+// Add Properties
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+
+person.lastName;
+
+
+person["lastName"];
+
+//store
+
+//let age = person.age;
+
+
+//delete 
+
+
+//delete person.age;
+
+
+
+document.getElementById("name").innerHTML=person.firstName + ",  " + person.lastName + ",  "  + person.age+" ,  " +person.eyeColor;
+       
+
+//nested obj
+
+myObj = {
+  name:"John",
+  age:30,
+  myCars: {
+    car1:"Ford",
+    car2:"BMW",
+    car3:"Fiat"
+  }
+}
+
+
+//access nested obj
+myObj.myCars.car2;
+myObj.myCars["car2"];
+
+
+const person5 = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+
+name = person5.fullName();
+
+
+// An object method is a function definition stored as a property value.
+
+// If you access it without (), it will return the function definition:
+
+// function() { return this.firstName + " " + this.lastName; }
+
+
+name = person.fullName;
+
+
+const person1 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
+let person2={
+            name:"SS",
+            age:30
+        };
+        person['name']="SSSSS"
+
+// Create an Object
+const person3 = new Object();
+
+// Add Properties
+person3.firstName = "John";
+person3.lastName = "Doe";
+person3.age = 50;
+person3.eyeColor = "blue";
+
+
+// // Create an Object
+// const person = {
+//   name: "John",
+//   age: 30,
+//   city: "New York"
+// };
+
+// document.getElementById("demo").innerHTML = person;
+
+</script>
+</body>
+</html>
+
+
+
+<!-- accesing the values of  the html file -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Objects</h1>
+<h2>Displaying Properties</h2>
+
+<p id="demo"></p>
+
+<script>
+// Create an Object
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+// Display Properties
+document.getElementById("demo").innerHTML = person.name + ", " + person.age + ", " + person.city;
+</script>
+
+</body>
+</html> -->
