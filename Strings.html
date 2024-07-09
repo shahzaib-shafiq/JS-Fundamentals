@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--     
+    Basic String Methods
+    Javascript strings are primitive and immutable: All string methods produce a new string without altering the original string.
+    
+    String length
+    String charAt()
+    String charCodeAt()
+    String at()
+    String [ ]
+    String slice()
+    String substring()
+    String substr()
+    See Also:
+    String Search Methods
+    String Templates
+    String toUpperCase()
+    String toLowerCase()
+    String concat()
+    String trim()
+    String trimStart()
+    String trimEnd()
+    String padStart()
+    String padEnd()
+    String repeat()
+    String replace()
+    String replaceAll()
+    String split() -->
+
+
+<!-- 
+-----------------------    String Search Methods -----------------------------------------
+String indexOf()
+String lastIndexOf()
+String search()
+See Also:
+Basic String Methods
+String Templates
+String match()
+String matchAll()
+String includes()
+String startsWith()
+String endsWith() -->
+
+
+
+
+
+    <script>
+        // let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        // let length = text.length;
+        // console.log(length)
+
+
+        // let text2 = "We are the so-called \"Vikings\" from the north.";
+        // console.log(text2)
+
+        let text = "Please locate where 'locate' occurs!";
+let index = text.indexOf("locate", 15);
+
+
+
+        //start searcing from last and 15(2nd param ) is used to skip 15/ certain nuber of s[aces ferom the ast]
+        let text23 = "Please locate where 'locate' occurs!";
+        console.log(text23.lastIndexOf("locate", 15))       ;
+
+        let tex3t = "Please locate where 'locate' occurs!";
+        console.log(text.search("locate"));
+
+
+        let text4 = "Please locate where 'locate' occurs!";
+        console.log(text4.search(/where/))       ;
+
+
+//The two methods, indexOf() and search(), are equal?
+
+// They accept the same arguments (parameters), and return the same value?
+
+// The two methods are NOT equal. These are the differences:
+
+// The search() method cannot take a second start position argument.
+// The indexOf() method cannot take powerful search values (regular expressions).
+
+
+
+//Searichng/finding  in string
+const iterator = text.matchAll("Cats");
+
+
+// If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.
+const iterator2 = text.matchAll(/Cats/g);
+
+
+
+// If you want to search case insensitive, the insensitive flag (i) must be set:
+
+// Example
+const iterator3 = text.matchAll(/Cats/gi);
+
+
+
+    </script>
+</body>
+</html>
