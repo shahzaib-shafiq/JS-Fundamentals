@@ -19,7 +19,24 @@ hello = () => {
 }
 
 
+let sum = (a, b) => a + b;
 
+/* This arrow function is a shorter form of:
+
+let sum = function(a, b) {
+  return a + b;
+};
+*/
+
+alert(sum(1, 2)); // 3
+
+
+let numsum = (a, b) => {
+    return a + b;
+}
+
+let res = numsum(4, 5)
+console.log(res)
 //   <!DOCTYPE html>
 // <html>
 // <body>
