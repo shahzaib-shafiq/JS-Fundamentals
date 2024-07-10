@@ -112,3 +112,49 @@ function myFunction(item) {
 
     console.log(item);
 }
+
+
+// Example with nested loops of different types
+let i = 0;
+while (i < 3) {                       // Outer loop (while loop)
+    let j = 0;
+    while (j < 3) {                   // Inner loop (while loop)
+        console.log(`(${i}, ${j})`);
+        j++;
+    }
+    i++;
+}
+
+
+
+
+
+
+bills = [345, 654, 678, 555, 345, 765, 467, 34, 567, 876, 9987, 6567, 5456]
+const tips = []
+const total = [];
+
+
+
+let calctips = function (bill) {
+
+    return bill >= 50 && bill <= 300 ? bill * 0.8 : bill * 1.2
+
+}
+
+
+for (let K = 0; K < bills.length; K++) {
+
+
+
+    let tip = calctips(bills[i])
+    tips.push(tip)
+    total.push(bills[i] + tip)
+}
+
+
+console.log(bills, tips, total)
+
+
+
+
