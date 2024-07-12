@@ -14,6 +14,7 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
   openingHours: {
     thu: {
       open: 12,
@@ -28,9 +29,52 @@ const restaurant = {
       close: 24,
     },
   },
+
+  // orderDelivery: function (obj) {
+  //   console.log(obj);
+  // },
+
+  // orderDelivery: function (starterIndex, mainIndex, time, adress) {
+  //   //console.log(obj);
+  //   console.log(
+  //     `Order Recived! ${this.starterMenu[starterIndex]} and ${this.mainCourse[mainIndex]}
+  //      will be delivered at ${adress}
+  //      at Time ${time}
+  //     `
+  //   );
+  // },
+
+  // also provided default values
+  orderDelivery: function ({ starterIndex = 1, mainIndex = 0, time, address }) {
+    console.log(
+      `Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}
+      will be delivered at ${address}
+      at time ${time}`
+    );
+  },
 };
 
+restaurant.orderDelivery({
+  time: "23:30",
+  address: "G-29",
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
+// restaurant.orderDelivery({
+//   time: "21:30",
+//   adress: "F-29",
+//   mainIndex: 1,
+//   starterIndex: 0,
+// });
+
 const arr = [23, 4, 5, 7, 8, 9];
+
+// const {
+//   fri: { open, close },
+// } = openingHours;
+
+// console.log(open, close);
 
 // let a = arr[0];
 // let b = arr[1];
@@ -89,3 +133,50 @@ console.log(p, q, r);
 const [p2 = 1, q2 = 1, r2 = 1] = [4, 5];
 
 console.log(p2, q2, r2);
+
+// Destructure Objects
+const { name, openingHours, categories } = restaurant;
+
+//console.log(name, openingHours, categories);
+
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: cate,
+} = restaurant;
+
+console.log(restaurantName, hours, cate);
+
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
+let a = 999;
+let b = 6666;
+
+console.log(a, b);
+
+// const obj = { a: 23, b: 43, c: 67 }(({ a, b } = obj));
+
+//used when variables are not aleady declared
+
+// const obj = { a: 23, b: 43, c: 67 };
+//   const { a, b } = obj;
+
+// console.log(a, b);
+
+//used when variables are aleady declared
+
+const obj = { a: 23, b: 43, c: 67 };
+
+let a, b;
+({ a, b } = obj); // Note the parentheses around the assignment
+
+console.log(a, b);
+
+//nested objects
+
+const {
+  fri: { open, close },
+} = openingHours;
+
+console.log(open, close);
