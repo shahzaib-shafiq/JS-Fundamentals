@@ -14,43 +14,41 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
 };
-
-//   openingHours: {
-//     thu: {
-//       open: 12,
-//       close: 22,
-//     },
-//     fri: {
-//       open: 11,
-//       close: 23,
-//     },
-//     sat: {
-//       open: 0, // Open 24 hours
-//       close: 24,
-//     },
-//   },
-// };
 
 const arr = [23, 4, 5, 7, 8, 9];
 
-let a = arr[0];
-let b = arr[1];
-let c = arr[2];
-let d = arr[3];
+// let a = arr[0];
+// let b = arr[1];
+// let c = arr[2];
+// let d = arr[3];
 
-console.log(a);
-console.log(b);
+// console.log(a);
+// console.log(b);
 
-console.log(c);
-console.log(d);
+// console.log(c);
+// console.log(d);
 
-const [w, x, y, z] = arr;
+// const [w, x, y, z] = arr;
 
-console.log(w);
-console.log(x);
-console.log(y);
-console.log(z);
+// console.log(w);
+// console.log(x);
+// console.log(y);
+// console.log(z);
 
 let [first, second] = restaurant.categories;
 
@@ -70,3 +68,16 @@ const [starter, mainCourse] = restaurant.order(2, 0);
 console.log(starter, mainCourse);
 
 const nested = [2, 4, [5, 6]];
+
+//nested destructuring
+
+//return whole nested array
+const [i, , j] = nested;
+console.log(i, j);
+
+//return elements insides nested array
+const [i2, , [j2, k2]] = nested;
+console.log(j2, k2);
+
+const { names, openingHours, categories } = restaurant;
+console.log(names, openingHours, categories);
