@@ -81,3 +81,11 @@ console.log(j2, k2);
 
 const { names, openingHours, categories } = restaurant;
 console.log(names, openingHours, categories);
+
+const [p, q, r] = [4, 5, 6];
+
+console.log(p, q, r);
+
+const [p2 = 1, q2 = 1, r2 = 1] = [4, 5];
+
+console.log(p2, q2, r2);
