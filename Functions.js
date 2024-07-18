@@ -87,6 +87,7 @@ const high5 = function () {
 document.body.addEventListener("click", high5);
 ["Jonas", "Martha", "Adam"].forEach(high5);
 ///////////////////////////////////////
+
 // Functions Returning Functions
 const greet = function (greeting) {
   return function (name) {
@@ -207,57 +208,56 @@ BONUS TEST DATA 2: [1, 5, 3, 9, 6, 1]
 GOOD LUCK 😀
 */
 
-/*
 const poll = {
-  question: 'What is your favourite programming language?',
-  options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
+  question: "What is your favourite programming language?",
+  options: ["0: JavaScript", "1: Python", "2: Rust", "3: C++"],
   // This generates [0, 0, 0, 0]. More in the next section 😃
   answers: new Array(4).fill(0),
   registerNewAnswer() {
     // Get answer
     const answer = Number(
       prompt(
-        `${this.question}\n${this.options.join('\n')}\n(Write option number)`
+        `${this.question}\n${this.options.join("\n")}\n(Write option number)`
       )
     );
     console.log(answer);
     // Register answer
-    typeof answer === 'number' &&
+    typeof answer === "number" &&
       answer < this.answers.length &&
       this.answers[answer]++;
     this.displayResults();
-    this.displayResults('string');
+    this.displayResults("string");
   },
-  displayResults(type = 'array') {
-    if (type === 'array') {
+  displayResults(type = "array") {
+    if (type === "array") {
       console.log(this.answers);
-    } else if (type === 'string') {
+    } else if (type === "string") {
       // Poll results are 13, 2, 4, 1
-      console.log(`Poll results are ${this.answers.join(', ')}`);
+      console.log(`Poll results are ${this.answers.join(", ")}`);
     }
   },
 };
 document
-  .querySelector('.poll')
-  .addEventListener('click', poll.registerNewAnswer.bind(poll));
-poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
-poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
+  .querySelector(".poll")
+  .addEventListener("click", poll.registerNewAnswer.bind(poll));
+poll.displayResults.call({ answers: [5, 2, 3] }, "string");
+poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, "string");
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
 // [5, 2, 3]
 // [1, 5, 3, 9, 6, 1]
 ///////////////////////////////////////
 // Immediately Invoked Function Expressions (IIFE)
 const runOnce = function () {
-  console.log('This will never run again');
+  console.log("This will never run again");
 };
 runOnce();
 // IIFE
 (function () {
-  console.log('This will never run again');
+  console.log("This will never run again");
   const isPrivate = 23;
 })();
 // console.log(isPrivate);
-(() => console.log('This will ALSO never run again'))();
+(() => console.log("This will ALSO never run again"))();
 {
   const isPrivate = 23;
   var notPrivate = 46;
@@ -312,7 +312,6 @@ const boardPassengers = function (n, wait) {
 };
 const perGroup = 1000;
 boardPassengers(180, 3);
-*/
 
 ///////////////////////////////////////
 // Coding Challenge #2
